@@ -6,7 +6,7 @@ body {
     color: #742305;
 }
 
-#container{
+#container {
     width: 94%;
     margin: 0 auto;
 }
@@ -14,12 +14,10 @@ body {
 #menu {
     display: flex;
     flex-wrap: wrap;
-    align-content: flex-start;  
-
+    align-content: flex-start;
     background-color: #FEF7E2;
     border-radius: 50px;
-    padding: 20px;        
-    border: 1px solid rgb(255, 0, 255);
+    padding: 20px;
 }
 
 #logo {
@@ -52,7 +50,7 @@ body {
 
 main h1 {
     font-weight: 800;
-    font-size: 1.9em;    
+    font-size: 1.9em;
 }
 
 /* scheda */
@@ -61,7 +59,6 @@ main h1 {
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: center;
-    border: 1px solid rgb(255, 0, 255);
     border-radius: 30px;
     margin: 20px auto;
     background-color: #FEF7E2;
@@ -89,7 +86,7 @@ main h1 {
     padding: 7px;
     font-weight: bold;
     margin: 10px;
-    font-size: 0.8em;    
+    font-size: 0.8em;
 }
 
 #descrizione {
@@ -100,38 +97,177 @@ main h1 {
     align-content: space-between;
 }
 
-article > h2{
+article>h2 {
     font-weight: 800;
-    margin-top: 3.5rem;    
+    margin-top: 3.5rem;
 }
 
-#news{
+#news {
     border-radius: 25px;
     text-align: left;
     padding: 15px;
-    border: 1px solid rgb(255, 0, 255);    
+    /* border: 1px solid rgb(255, 0, 255); */
 }
 
-#news img{
+#news img {
     width: 100%;
-    border: 1px solid red;
 }
 
-#news h2{
+#news h2 {
     font-weight: 800;
 }
 
-@media screen  and (min-width: 576px){
+/*** min-width: 576px *******************************************************************/
+@media screen and (min-width: 576px) {
 
     #menu {
-        display: flex;        
-        justify-content: space-between;
-    
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+
         background-color: #FEF7E2;
         border-radius: 50px;
-        padding: 20px;        
-        border: 1px solid rgb(255, 0, 255);
+        padding: 20px;
     }
 
+    .pulsante {
+        padding: 1em;
+    }
+
+    #menu div:nth-of-type(1) {
+        order: 3;
+    }
+
+    #menu div:nth-of-type(2) {
+        order: 1;
+    }
+
+    #menu div:nth-of-type(3) {
+        order: 2;
+    }
+
+    #menu div:nth-of-type(4) {
+        order: 4;
+    }
+
+    #menu div:nth-of-type(5) {
+        order: 5;
+    }
+
+    #cards {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 40%;
+    }
+
+    /*nascondi quinta card*/
+    #cards div:last-of-type {
+        display: none;
+    }
+
+    article h2 {
+        text-align: left;
+    }
 }
-    
+
+/*** min-width: 768px *******************************************************************/
+@media screen and (min-width: 768px) {
+
+    #menu div:nth-of-type(1) {
+        order: 1;
+    }
+
+    #menu div:nth-of-type(2) {
+        order: 2;
+    }
+
+    #menu div:nth-of-type(3) {
+        order: 3;
+    }
+
+    #menu div:nth-of-type(4) {
+        order: 4;
+    }
+
+    #menu div:nth-of-type(5) {
+        order: 5;
+    }
+
+    #container {
+        display: flex;
+        margin-left: -10px;
+    }
+
+    #menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 0;
+        height: 100vh;
+        margin-top: -8px;
+        margin-left: 0;
+        position: fixed;
+        width: 25%;
+    }
+
+    #logo {
+        margin: 20px 5px;
+    }
+
+    .pulsante {
+        margin: 20px 5px;
+        width: 65%;
+        padding: 28px;
+    }
+
+    #pagina {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 40%;
+        width: 75%;
+    }
+}
+
+/*** min-width: 1200px *******************************************************************/
+@media screen and (min-width: 1200px) {
+
+    #logo {
+        margin: 20px 5px;
+        width: 60%;
+    }
+
+    #menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* visualizza quinta card */
+    #cards div:last-of-type {
+        display: block;
+    }
+
+    #cards {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .card {
+        margin: 10px;
+        width: 17%;
+    }
+
+    #pagina {
+        margin-left: 35%;
+    }
+
+    #prodotto h2 {
+        /* width: 100%;
+        height: 100%;
+        margin: 0; */
+        border: 1px solid red;
+    }
+}
