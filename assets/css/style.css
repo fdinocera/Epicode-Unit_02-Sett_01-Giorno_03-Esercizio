@@ -234,20 +234,26 @@ article>h2 {
 /*** min-width: 1200px *******************************************************************/
 @media screen and (min-width: 1200px) {
 
+    main h1 {
+        text-align: left;
+        font-size: 2.5rem;
+    }
+
+    #logo h1 {
+        text-align: left;
+        font-size: 1.5rem;
+    }
+
     #logo {
-        margin: 20px 5px;
-        width: 60%;
+        margin: 12px 5px;
+        width: 83%;
     }
 
     #menu {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    /* visualizza quinta card */
-    #cards div:last-of-type {
-        display: block;
+        width: 20%;
     }
 
     #cards {
@@ -257,17 +263,50 @@ article>h2 {
 
     .card {
         margin: 10px;
-        width: 17%;
+        width: 150px;
+        border-radius: 60px;
+    }
+
+    .card img {
+        border-top-right-radius: 60px;
+        border-top-left-radius: 60px;
     }
 
     #pagina {
-        margin-left: 35%;
+        margin-left: 28%;
+    }
+
+    #prodotto {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.5em;
+        margin: 10px;
     }
 
     #prodotto h2 {
-        /* width: 100%;
-        height: 100%;
-        margin: 0; */
-        border: 1px solid red;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+    #prodotto p {
+        line-height: 1.2;
+        margin: 0 auto;
+    }
+
+    #prezzo {
+        font-weight: normal;
+        margin-right: 5px;
+    }
+
+    .buttonCart {
+        width: 60px;        
+    }
+
+    .pulsante {
+        margin: 10px;
+    }
+
+    #cards div:last-of-type {        
+        display: flex;        
     }
 }
